@@ -1,3 +1,8 @@
-/*
- * This file is used to define the versions of the providers that are used in the module.
- */
+terraform {
+  required_providers {
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "~> 3.4.0"
+    }
+  }
+}
