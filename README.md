@@ -193,7 +193,15 @@ Default: `false`
 
 ## Outputs
 
-No outputs.
+The following outputs are exported:
+
+### <a name="output_group"></a> [group](#output\_group)
+
+Description: The Azure AD group created by this module.
+
+### <a name="output_members"></a> [members](#output\_members)
+
+Description: The members of the Azure AD group.
 
 ## Resources
 
