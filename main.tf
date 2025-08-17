@@ -23,9 +23,12 @@ resource "azuread_group" "this" {
 
   // Ensure that the group is created with an empty members list to avoid issues with the lifecycle management as it is managed by separate resource
   // This is a solution to prevent Terraform from trying to manage the members directly in this resource
-  members = []
+  members                 = []
+  administrative_unit_ids = []
+  // This is a workaround to avoid issues with the lifecycle management of the members
   lifecycle {
     ignore_changes = [
+      administrative_unit_ids,
       members
     ]
   }
